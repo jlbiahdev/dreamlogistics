@@ -1,0 +1,44 @@
+name: Déploiement Hostinger
+
+# Repris des dépôts portfolio et nzuane : envoi FTPS vers Hostinger à chaque merge sur main,
+# ou à la demande (Actions > Déploiement Hostinger > Run workflow).
+# Secrets à créer (Settings > Secrets and variables > Actions) : FTP_SERVER (nom d'hôte du serveur,
+# par exemple srv1655.hstgr.io, et non son adresse IP, sinon le certificat est refusé), FTP_USERNAME, FTP_PASSWORD.
+# Dossier cible : racine du compte FTP par défaut ; variable FTP_SERVER_DIR pour le changer.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Envoi FTP vers Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # FTPS : identifiants et fichiers chiffrés (le FTP simple les transmet en clair).
+          protocol: ftps
+          security: strict
+          local-dir: ./
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.vscode/**
+            **/.DS_Store
+            README.md
+            LICENSE
+            CLAUDE.md
+            summary.md

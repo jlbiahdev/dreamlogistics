@@ -72,19 +72,14 @@
                     <div class="comment-box">
                         <h3>Laissez un commentaire</h3>
 
-                        <form action="" class="comment-form" id="comment-form">
-                            <input type="text" name="name" id="name" placeholder="Votre Nom">
-                            <input type="email" name="email" id="email" placeholder="Votre Email">
-                            <input type="tel" name="phonenumber" id="phonenumber" placeholder="Votre Téléphone">
-                            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                        <form class="comment-form" id="comment-form" action="envoi.php" method="POST">
+                            <input type="hidden" name="formulaire" value="commentaire">
+                            <input type="text" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+                            <input type="text" name="nom" id="name" placeholder="Votre Nom" required maxlength="200" aria-label="Votre nom">
+                            <input type="email" name="email" id="email" placeholder="Votre Email" maxlength="200" aria-label="Votre e-mail">
+                            <input type="tel" name="telephone" id="phonenumber" placeholder="Votre Téléphone" maxlength="200" aria-label="Votre téléphone">
+                            <textarea name="message" id="message" cols="30" rows="5" required maxlength="5000" aria-label="Votre commentaire"></textarea>
                             <button type="submit" class="hero-btn primary-btn">POSTER</button>
-                            <div id="message-box">
-                                <i class="fa fa-times"></i>
-                                <div class="msg-title">
-                                    <i class="fa-solid fa-thumbs-up"></i> Bien
-                                </div>
-                                <p id="paragraf">&nbsp;</p>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -136,7 +131,6 @@
             <p>Copyright &copy; Cyrano Conseil 2024</p>
         </section>
 
-        <script src="js/email.js" ></script>
         <script src="js/index.js" ></script>
 
     </body>

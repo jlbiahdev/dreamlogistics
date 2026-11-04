@@ -20,22 +20,3 @@ window.initMap = function() {
 
 // Append the 'script' element to 'head'
 document.head.appendChild(script);
-
-//Annule le rechargement du formulaire
-$("#contact-form").submit(function(e) {
-    e.preventDefault();
-    sendEmail();
-});
-
-//Annule le rechargement du formulaire
-$("#comment-form").submit(function(e) {
-    e.preventDefault();
-    sendComment();
-});
-
-//Fermeture des message boxes
-$("#message-box .fa-times").click(function(e) {
-    setTimeout(() => {
-        $("#message-box").css("display", "none")
-    }, 1000);
-});
