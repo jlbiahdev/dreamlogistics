@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Dream Logistics - An EMANA Academy</title>
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo-def.png" alt="" srcset=""></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-solid fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">accueil</a></li>
+                        <li><a href="about.html">à propos</a></li>
+                        <li><a href="course.html">nos cours</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Des formations en centre, en alternance, à distance, pour toutes les situations/h1>
+        </section>
+        
+        <!-- blog -->
+        <section class="blog-content">
+            <div class="row">
+                <div class="blog-left">
+                    <img src="images/certificate.jpg" alt="" srcset="">
+                    <h2>Tous nos chemins mènent à l’emploi !</h2>
+                    <p>Il n’y a pas un chemin, il y a des chemins qui mènent à l’emploi et nous l’avons bien pris en compte pour vous proposer des formules de formation différentes qui s’adaptent à vos besoins, à vos envies, à vos contraintes. Que vous cherchiez une flexibilité de planning, un encadrement structurant, une immersion en entreprise ou une optimisation de votre temps d’apprentissage, vous trouverez certainement le tempo qu’il vous faut parmi notre éventail d’offres de formations. Nous avons calibré différents formats d’apprentissage afin de répondre aux mieux aux objectifs professionnels qui sont les vôtres et également aux attentes des entreprises afin de maximiser vos chances de réussite.</p>
+                    <br>
+                    <p>
+                        <strong>Formation métier en centre avec application pratique en entreprise</strong><br>
+                        Cette formule en centre est un parcours diplômant qui s’adressent à tout demandeur d’emploi ou salarié souhaitant obtenir une certification reconnue dans son domaine. Nos formations professionnelles via cette formule reposent sur la combinaison de deux périodes professionnalisantes : 4 mois de cours en centre, complétés par des cours à distance (visioconférence et e-learning) + 4 mois d’application pratique en entreprise.
+                    </p><br>
+                    <p>
+                        <strong>Formation métier en visio avec stage en entreprise</strong><br>
+                        Cette formule à distance combine deux temps forts : 3 mois de cours opérationnels en visio de chez soi + 3 mois d’application dans une entreprise près de chez soi. Elle est particulièrement adaptée à des profils autonomes prêts à s’investir pour réaliser en peu de temps un gap professionnel significatif. C’est un parcours diplômant qui permet de préparer sa reconversion professionnelle dans un temps optimisé.
+                    </p><br>
+                    <p>
+                        <strong>Formation métier en alternance</strong><br>
+                        L’alternance vous permet, en 1 an seulement, d’apprendre un métier, de le pratiquer, d’obtenir un diplôme et de décrocher un emploi. La particularité de nos formations professionnelles en alternance repose sur leur durée unique de 12 mois (hors Parcours Sup sur 24 mois). Ces formations métiers permettent d’obtenir un diplôme reconnu par l’État.
+                    </p><br>
+                    <p>
+                        <strong>Formation métier à distance en 100% e-learning</strong><br>
+                        Ce format repose sur un parcours en ligne de 7 mois mixant classes virtuelles, cours en ligne avec quiz, études de cas en groupe ou en individuel, forum de discussion. Les choix pédagogiques ont été étudiés avec soin pour vous garantir un modèle de formation en ligne fiable et performant.
+                    </p><br>
+                    <p>
+                        <strong>Action de formation en situation de travail</strong><br>
+                        L’AFEST est une modalité de formation qui a la particularité d’utiliser les situations de travail comme outil de formation. Elle propose un vrai parcours de formation personnalisé aux pratiques de l’entreprise, en s’appuyant sur l’efficacité du « faire pour apprendre ».
+                    </p><br>
+                    <p>
+                        <strong>Blocs de compétences ou modules de formation</strong><br>
+                        Ces blocs de compétences et modules sont des formats courts, proposés autour de compétences recherchées par les entreprises, permettant ainsi d’optimiser son employabilité.
+                        <br> Un accompagnement est assuré par des formateurs experts dans leur métier et par un responsable de formation, pour garantir l’acquisition des compétences.
+                    </p>
+
+                    <div class="comment-box">
+                        <h3>Laissez un commentaire</h3>
+
+                        <form action="" class="comment-form" id="comment-form">
+                            <input type="text" name="name" id="name" placeholder="Votre Nom">
+                            <input type="email" name="email" id="email" placeholder="Votre Email">
+                            <input type="tel" name="phonenumber" id="phonenumber" placeholder="Votre Téléphone">
+                            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                            <button type="submit" class="hero-btn primary-btn">POSTER</button>
+                            <div id="message-box">
+                                <i class="fa fa-times"></i>
+                                <div class="msg-title">
+                                    <i class="fa-solid fa-thumbs-up"></i> Bien
+                                </div>
+                                <p id="paragraf">&nbsp;</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="blog-right">
+                    <h3>Categories</h3>
+                    <div>
+                        <span>L'approvisionnement </span>
+                        <span>3</span>
+                    </div>
+                    <div>
+                        <span>L'inventaire</span>
+                        <span>4</span>
+                    </div>
+                    <div>
+                        <span>L'entreposage</span>
+                        <span>4</span>
+                    </div>
+                    <div>
+                        <span>Le stockage</span>
+                        <span>3</span>
+                    </div>
+                    <div>
+                        <span>Le transport</span>
+                        <span>4</span>
+                    </div>
+                    <div>
+                        <span>Le service client</span>
+                        <span>6</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="footer">
+            <div class="about">
+                <h4>à propos de nous</h4>
+                <h5>Une expérience pédagogique immersive</h5>
+                <p>
+                    “Chez <span class="app">DREAM LOGISTICS</span>, nous savons qu’il n’y a pas d’âge pour se former, actualiser ses compétences et/ou changer d’univers; en somme, pour se réinventer professionnellement. Nos formations métiers, diplômantes et qualifiantes répondent à ces ambitions. Chaque année, + de 90% de nos apprenants retrouvent un emploi.”
+                </p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/61557009383677/" target="_blank" rel="noopener" rel="noreferrer"><i class="fa fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/dreamlogacademy" target="_blank" rel="noopener" rel="noreferrer"><i class="fa fa-brands fa-twitter"></i></a>
+                <i class="fa a-brands fa-linkedin"></i>
+                <i class="fa a-brands fa-youtube"></i>
+            </div>
+            <p>Copyright &copy; Cyrano Conseil 2024</p>
+        </section>
+
+        <script src="js/email.js" ></script>
+        <script src="js/index.js" ></script>
+
+    </body>
+</html>
+
+<!-- 
+    https://unsplash.com/photos/a-person-holding-a-black-umbrella-RpxgkJRqg5I?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
+-->
