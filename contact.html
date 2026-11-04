@@ -12,8 +12,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script> (function() { emailjs.init('HHi-YtFsGz1QmtvVT'); })(); </script>
 
         <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -126,26 +124,21 @@
             </div>
             <div class="row">
                 <div class="contactus-col">
-                    <form id="contact-form" class="contact-form">
-                        <input type="text" name="name" id="name" placeholder="Votre Nom">
-                        <input type="email" name="email" id="email" placeholder="Votre Email">
-                        <input type="tel" name="phonenumber" id="phonenumber" placeholder="Votre Téléphone">
-                        <select name="academie" id="academie">
+                    <form id="contact-form" class="contact-form" action="envoi.php" method="POST">
+                        <input type="hidden" name="formulaire" value="contact">
+                        <input type="text" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
+                        <input type="text" name="nom" id="name" placeholder="Votre Nom" required maxlength="200" aria-label="Votre nom">
+                        <input type="email" name="email" id="email" placeholder="Votre Email" maxlength="200" aria-label="Votre e-mail">
+                        <input type="tel" name="telephone" id="phonenumber" placeholder="Votre Téléphone" maxlength="200" aria-label="Votre téléphone">
+                        <select name="academie" id="academie" aria-label="Académie">
                             <option value="" disabled selected>Sélectionnez une académie</option>
                             <option value="Cameroun">Ebolowa, Cameroun</option>
                             <option value="RDC">kinshasa, RDC</option>
                             <option value="CotedIvoire">Abidjan, Côte d'Ivoire</option>
                         </select>
-                        <input type="text" name="subject" id="subject" placeholder="Le sujet de votre message">
-                        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                        <input type="text" name="sujet" id="subject" placeholder="Le sujet de votre message" maxlength="200" aria-label="Sujet">
+                        <textarea name="message" id="message" cols="30" rows="5" required maxlength="5000" aria-label="Votre message"></textarea>
                         <button type="submit" class="hero-btn primary-btn">POSTER</button>
-                        <div id="message-box">
-                            <i class="fa fa-times"></i>
-                            <div class="msg-title">
-                                <i class="fa-solid fa-thumbs-up"></i> Bien
-                            </div>
-                            <p id="paragraf">&nbsp;</p>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -169,7 +162,6 @@
             <p>Copyright &copy; Cyrano Conseil 2024</p>
         </section>
 
-        <script src="js/email.js" ></script>
         <script src="js/index.js" ></script>
 
     </body>
